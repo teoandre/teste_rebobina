@@ -29,7 +29,7 @@
     </header>
     <main>
         <section id="reserva">
-            <form>
+            <form id="formReserva">
                 <fieldset>
                     <legend>Solicitação de Reserva</legend> <!--titulo embutido na borda-->
                     <div>
@@ -38,7 +38,7 @@
                     </div>
                     <div>
                         <label for="celular">Telefone</label>
-                        <input type="tel" id="fone" name="fone" placeholder="00 00000-0000"><br><br>
+                        <input type="tel" id="telefone" name="telefone" placeholder="00 00000-0000"><br><br>
                     </div>
                     <div>
                         <label for="email">E-mail</label>
@@ -85,7 +85,7 @@
                     </div>
                     <div>
                         <input type="submit" value="Solicitar reserva"
-                            onclick="alert('Obrigado! Em breve, entraremos em contato para confirmação de sua reserva.')">
+                            >
                     </div>
                 </fieldset>
             </form> <!--para deixar centralizado-->
@@ -96,6 +96,8 @@
             <p class="mb-2">&copy; 2025 Rebobina! Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 

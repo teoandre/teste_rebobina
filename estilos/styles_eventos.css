@@ -195,7 +195,7 @@ table td {
         width: 100%;
         max-width: 560px;
         aspect-ratio: 16 / 9;
-        height: auto;
+        height: 50px;
     }
 
     .reserva_tabela {
@@ -215,7 +215,7 @@ table td {
         width: 100%;
         max-width: 360px;
         aspect-ratio: 16 / 9;
-        height: auto;
+        height: 50px;
     }
 
     main {
