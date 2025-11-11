@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+/*fontes titulos   font-family: "Bungee", sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+/*fontes texto   font-family: "Alfa Slab One", serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Old Standard", serif;
+}
+
+body {
+    background-color: #1f1915;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #1f1915;
+    width: 100%;
+    padding: 5px 5%;
+    font-family: "Alfa Slab One", serif;
+}
+
+.nav_logo {
+    width: 80px;
+    scale: 1.5;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+li a {
+    font-family: "Alfa Slab One", serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #BF6E50;
+}
+
+li.active a {
+    color: #F6E0BE;
+    border-bottom: 3px solid #f6e0be;
+}
+
+main {
+    width: 100%;
+    padding: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #F6E0BE;
+    /*background-image: linear-gradient(to bottom right, #71a63a, #18668c);*/
+    box-shadow: inset 0px 10px 10px #0000007d;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info {
+    background-color: #1f1915;
+    border-radius: 20px 0 0 20px;
+    box-shadow: -10px 8px 10px #0000006b;
+    padding: 20px;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex: 1 1 400px;
+    min-height: 400px;
+}
+
+.info p {
+    padding: 5px;
+    margin: 10px;
+}
+
+.nome_filme {
+    font-family: "Alfa Slab One", serif;
+}
+
+.reserva_tabela {
+    display: flex;
+    background-color: #1f1915;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 10px 8px 10px #0000006b;
+    width: 100%;
+    height: 600px;
+    padding: 20px;
+    text-align: center;
+    color: #BF6E50;
+    flex: 1 1 400px;
+    min-height: 400px;
+}
+
+table {
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+}
+
+thead {
+    background-color: #F6E0BE;
+}
+
+th {
+    font-family: "Alfa Slab One", serif;
+    padding: 18px;
+    color: #364652;
+    background-color: #F6E0BE;
+}
+
+table td {
+    padding: 18px;
+    border-bottom: 1px solid #364652;
+}
+
+.btn_reserva {
+    font-family: "Alfa Slab One", serif;
+    text-decoration: none;
+    background-color: #364652;
+    padding: 10px;
+    border-radius: 8px;
+    color: #F6E0BE;
+}
+
+.btn_reserva:hover{
+    background-color: white;
+    color: #1f1915;
+}
+
+.rodape {
+    padding: 10px;
+    text-align: center;
+}
