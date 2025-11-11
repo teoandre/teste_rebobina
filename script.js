@@ -4,6 +4,9 @@ const iframe = document.getElementsByTagName("iframe")[0];
 const nome_filme = document.getElementsByClassName("nome_filme")[0];
 const sinopse = document.getElementsByClassName("sinopse")[0];
 
+const form = document.getElementById("formReserva");
+const pedidoInput = document.getElementById("pedido");
+
 // PARAMETROS DA URL
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
@@ -99,4 +102,62 @@ function mostrarDados(sessoes) {
 
 document.addEventListener('DOMContentLoaded', function() {
     carregarTab();
+});
+
+pedidoInput.addEventListener("input", function() {
+    if (this.value.length > 180) {
+        this.value = this.value.slice(0, 180);
+        alert("O comentário pode ter no máximo 180 caracteres!");
+    }
+});
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault(); // impede envio automático da página
+    
+    const nome = document.getElementById("nome").value.trim();
+    const telefone = document.getElementById("telefone").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const filme = document.getElementById("filme").value;
+    const data = document.getElementById("data").value;
+    const horario = document.getElementById("horario").value;
+    const ingressos = document.getElementById("ingressos").value;
+    const pedido = pedidoInput.value.trim();
+
+    if (!nome || !telefone || !email || filme === "selecione" || !data || !horario) {
+        alert(" Por favor, preencha todos os campos obrigatórios.");
+        return;
+    }
+
+
+    if (!email.includes("@") || !email.includes(".")) {
+        alert("Digite um e-mail válido.");
+        return;
+    }
+
+    if (telefone.length < 11) {
+        alert("Digite um telefone válido com DDD.");
+        return;
+    }
+
+    const hoje = new Date();
+    const dataEscolhida = new Date(data);
+    if (dataEscolhida < hoje) {
+        alert("A data não pode ser anterior a hoje!");
+        return;
+    }
+
+    alert(
+        "🎬 Reserva realizada com sucesso!\n\n" +
+        "Nome: " + nome + "\n" +
+        "E-mail: " + email + "\n" +
+        "Telefone: " + telefone + "\n" +
+        "Filme: " + filme + "\n" +
+        "Data: " + data + "\n" +
+        "Horário: " + horario + "\n" +
+        "Ingressos: " + ingressos + "\n" +
+        "Comentário: " + pedido
+    );
+
+    // Limpa o formulário após mostrar
+    form.reset();
 });
