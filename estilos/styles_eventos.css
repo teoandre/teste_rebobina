@@ -154,56 +154,84 @@ table td {
     text-align: center;
 }
 
+/* --- RESPONSIVIDADE --- */
+
 @media screen and (max-width: 1232px) {
+    main {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
     .info {
         border-radius: 20px 20px 0 0;
         box-shadow: none;
-
+        height: auto;
     }
 
     .reserva_tabela {
         border-radius: 0 0 20px 20px;
         box-shadow: none;
         padding: 0;
+        height: auto;
     }
 
     table {
         width: 95%;
-        height: 85%;
+        height: auto;
     }
 
-    td {
+    td, th {
         font-size: 18px;
-    }
-
-    tr {
-        font-size: 20px;
     }
 }
 
 @media screen and (max-width: 850px) {
 
     main {
-        padding: 10px;
+        padding: 20px;
     }
-    
 
     iframe {
-        width: 360px;
-        height: 215px;
+        width: 100%;
+        max-width: 560px;
+        aspect-ratio: 16 / 9;
+        height: auto;
     }
 
     .reserva_tabela {
         overflow-x: auto;
-        padding: 20px;
+        padding: 10px;
     }
-    
+
+    .info p {
+        text-align: center;
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width: 580px) {
+
     iframe {
-        width: 260px;
-        height: 115px;
+        width: 100%;
+        max-width: 360px;
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .info, .reserva_tabela {
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    td, th {
+        padding: 10px;
     }
 }
-
