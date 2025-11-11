@@ -250,3 +250,32 @@ footer {
     height: 100%;
     object-fit: cover;
 }
+
+@media screen and (max-width: 1000px) {
+    .card_filme {
+    width: 300px;
+    height: 400px;
+}   
+
+    #sobre {
+        padding: 20px;
+    }
+
+    #video-imagem-container {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 809px) {
+    .frame {
+        width: 200px !important;
+        height: 100px !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #reserva {
+        overflow-x: auto;
+    }
+}
