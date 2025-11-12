@@ -146,7 +146,7 @@ main {
 }
 
 .card_filme:hover::before {
-  background: #00000080; /* escurece no hover */
+  background: #00000080; 
 }
 
 .card_filme:hover {
@@ -157,7 +157,7 @@ main {
     padding: 10px;
 }
 #reserva form {
-    background-color: #F6E0B3; /* creme suave semi-transparente */
+    background-color: #F6E0B3; 
     max-width: 600px;
     width: 100%;
     box-shadow: 0 4px 15px #00000033;
@@ -172,9 +172,9 @@ fieldset {
 }
 footer {
     position: relative;
-    bottom: 0; /*posiciona no rodapé, funciona se position for != de static*/
+    bottom: 0;
     left: 0;
-    width: 100%;/*ocupa a largura da tela*/
+    width: 100%;
     background-color: #1f1915;
     color: #fff;
     text-align: center;
@@ -186,17 +186,16 @@ footer {
     display: flex;
     justify-content: center;
     padding: 50px 0;
-    /* degradê igual ao banner da página principal */
     position: relative;
     background-color: #F6E0B3;
      background-image: url('cine_rebonina.png');
-    background-size: cover; /* cobre toda a área */
-    background-position: center; /* centraliza a imagem */
-    background-repeat: no-repeat; /* evita repetição */
-    padding: 40px 5%; /* espaço interno */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 40px 5%; 
     display: flex;
-    justify-content: center; /* centraliza horizontalmente o form */
-    align-items: center; /* centraliza verticalmente o form */
+    justify-content: center; 
+    align-items: center; 
 }
 
 #main_sobre {
@@ -205,7 +204,7 @@ footer {
 }
 
 #sobre {
-    background-color: #F6E0BE; /* cor de fundo da seção */
+    background-color: #F6E0BE; 
     padding: 80px 50px;
 }
 
