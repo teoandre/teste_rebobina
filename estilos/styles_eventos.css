@@ -69,8 +69,13 @@ main {
 }
 
 iframe {
-    width: 560px;
-    height: 315px;
+    width: 100%;
+    aspect-ratio: 16 / 9;   /* Mantém proporção 16:9 automaticamente */
+    height: auto;
+    border: none;
+    display: block;
+    border-radius: 12px;    /* Opcional — acompanha o estilo arredondado */
+    max-width: 800px;       /* Limita o tamanho em telas grandes */
 }
 
 .info {
@@ -79,7 +84,7 @@ iframe {
     box-shadow: -10px 8px 10px #0000006b;
     padding: 20px;
     width: 100%;
-    height: 600px;
+    height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,6 +92,7 @@ iframe {
     color: white;
     flex: 1 1 400px;
     min-height: 400px;
+    overflow-y: auto;
 }
 
 .info p {
@@ -105,7 +111,7 @@ iframe {
     border-radius: 0 20px 20px 0;
     box-shadow: 10px 8px 10px #0000006b;
     width: 100%;
-    height: 600px;
+    height: 700px;
     padding: 20px;
     text-align: center;
     color: #BF6E50;
@@ -163,9 +169,18 @@ table td {
     }
 
     .info {
+        padding: 20px;
         border-radius: 20px 20px 0 0;
         box-shadow: none;
         height: auto;
+    }
+
+    iframe {
+        width: 100%;
+        max-width: 560px;
+        aspect-ratio: 16 / 9;
+        height: 300px;
+        padding: 70px;
     }
 
     .reserva_tabela {
@@ -196,15 +211,15 @@ table td {
     }
 
     iframe {
-        width: 100%;
-        max-width: 560px;
-        aspect-ratio: 16 / 9;
-        height: 300px;
-        padding: 70px;
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 16 / 9;
+    height: 200px;
+    padding: 40px;
     }
 
     .info {
-        padding: 100px;
+        padding: 20px;
         overflow-y: auto;
     }
 
